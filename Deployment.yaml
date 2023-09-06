@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: userpref-deployment
+  name: m3-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: userpref
+      app: m3
   template:
     metadata:
       labels:
-        app: userpref
+        app: m3
     spec:
       containers:
-        - name: userpref-container
+        - name: m3-container
           image: module3:1
           ports:
             - containerPort: 8085
